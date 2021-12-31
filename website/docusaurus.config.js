@@ -15,7 +15,7 @@ const config = {
   favicon: 'img/favicon.ico',
   organizationName: 'azorimor', // Usually your GitHub org/user name.
   projectName: 'azotranscode', // Usually your repo name.
-
+  trailingSlash: false,
   presets: [
     [
       'classic',
