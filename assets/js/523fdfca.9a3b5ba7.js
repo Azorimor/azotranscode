@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[609],{7622:function(a){a.exports=JSON.parse('{"allTagsPath":"/azotranscode/blog/tags","slug":"/azotranscode/blog/tags/hola","name":"hola","count":1,"permalink":"/azotranscode/blog/tags/hola"}')}}]);
