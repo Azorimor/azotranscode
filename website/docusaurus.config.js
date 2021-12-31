@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Azotranscode',
   tagline: 'Open Source Video Transcode Service',
-  url: 'https://azorimor.github.io/azotranscode/',
+  url: 'https://azorimor.github.io/',
   baseUrl: '/azotranscode/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
