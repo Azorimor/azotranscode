@@ -3,7 +3,7 @@ Open source video transcoding service.
 
 ## Functions
 - [ ] Transcode a given video into multiple formats. (360p,480p,720p, ...)
-- [ ] Transcode a given video to use onother container. (mp4, mkv, webm, ...)
+- [ ] Transcode a given video to use another container. (mp4, mkv, webm, ...)
 - [ ] Generate VTT-Subtitle files.
 - [ ] Generate VTT-Sprite images.
 - [ ] Generate Thumbnails.
