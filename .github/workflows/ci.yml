@@ -1,10 +1,14 @@
 name: CI
 on:
   push:
+    paths-ignore:
+      - 'website/**'
     branches:
       - master
       - develop
   pull_request:
+    paths-ignore:
+      - 'website/**'
 
 jobs:
   branch:
