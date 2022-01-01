@@ -24,13 +24,13 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/azorimor/azotranscode/tree/master/website/docs/',
+          editUrl: 'https://github.com/azorimor/azotranscode/tree/master/website/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/azorimor/azotranscode/tree/master/website/blog/',
+            'https://github.com/azorimor/azotranscode/tree/master/website/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -71,7 +71,7 @@ const config = {
             items: [
               {
                 label: 'Docs',
-                to: '/docs/intro',
+                to: '/docs/getting-started/getting-started-intro',
               },
             ],
           },
