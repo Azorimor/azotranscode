@@ -10,32 +10,29 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
-    image: '/azotranscode/img/undraw_docusaurus_mountain.svg',
+    title: 'Multiple Video Formats',
+    image: '/azotranscode/img/undraw/undraw_video_files.svg',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Azotranscode can transform any given video file to any other format. HLS and MPEG Dash are also supported.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    image: '/azotranscode/img/undraw_docusaurus_tree.svg',
+    title: 'Playable on any device',
+    image: '/azotranscode/img/undraw/undraw_video_influencer.svg',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Azotranscode can generate video files, which are optimized for specific devices and potentially reduce network traffic.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    image: '/azotranscode/img/undraw_docusaurus_react.svg',
+    title: 'Easy to use',
+    image: '/azotranscode/img/undraw/undraw_online_media.svg',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Azotranscode uses pre defined jobs to get started quickly. Additionally every step in the toolchain can be customized.
       </>
     ),
   },
