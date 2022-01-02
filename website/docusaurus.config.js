@@ -46,7 +46,7 @@ const config = {
         title: 'AzoTranscode',
         logo: {
           alt: 'Azotranscode Site Logo',
-          src: 'img/logo.svg',
+          src: 'img/logos/logo.svg',
         },
         items: [
           {
