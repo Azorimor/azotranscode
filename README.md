@@ -16,6 +16,7 @@ Open source video transcoding service.
 - [ ] VTT Online Editor
 - [ ] Everything is accessable through the REST API.
 - [ ] Easy deployable (docker-compose, helm chart)
+- [ ] Generate video preview (jpg, gif, ...)
 
 ## Documentation
 The documentation is available [here](https://azorimor.github.io/azotranscode/):
