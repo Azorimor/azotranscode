@@ -24,4 +24,4 @@ The documentation is available [here](https://azorimor.github.io/azotranscode/):
 Azotranscode uses open source tools. We use RabbitMQ for the queue system. MinIO for the S3 buckets and docker (docker-compose / kubernetes) to run the REST API, web dashboard and the worker containers. The data is stored using a postgresql database.  
 Videos are copied to the temporary video bucket. The worker containers are downloading / uploading the input / output files from this bucket. After the job is finished, all files get uploaded to the destination by another worker.  
 
-![AWS architecture diagram](/website/static/img/diagrams/azotranscode_architecture_overview_simple_v1.svg)
+![Architecture diagram](/website/static/img/diagrams/azotranscode_architecture_overview_simple_v1.svg)
