@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
-    "api": "apps/api"
+    "api": "apps/api",
+    "backend-core-auth": "libs/backend/core/auth"
   }
 }
