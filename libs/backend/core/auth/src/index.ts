@@ -1,3 +1,3 @@
-export * from './lib/backend-core-auth.controller';
-export * from './lib/backend-core-auth.service';
-export * from './lib/backend-core-auth.module';
+export * from './lib/auth.controller';
+export * from './lib/auth.service';
+export * from './lib/auth.module';
