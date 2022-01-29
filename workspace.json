@@ -2,6 +2,7 @@
   "version": 2,
   "projects": {
     "api": "apps/api",
-    "auth": "libs/backend/core/auth"
+    "auth": "libs/backend/core/auth",
+    "prisma": "libs/backend/core/prisma"
   }
 }

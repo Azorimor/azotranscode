@@ -15,7 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@azotranscode/backend/core/auth": ["libs/backend/core/auth/src/index.ts"]
+      "@lib/auth": [
+        "libs/backend/core/auth/src/index.ts"
+      ],
+      "@lib/prisma": ["libs/backend/core/prisma/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
