@@ -1,5 +1,6 @@
 import { PrismaService } from '@lib/prisma';
 import { ForbiddenException, Injectable } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
 import { AuthDto, SignupDto } from '../dto';
 import { JwtPayload, Tokens } from '../types';
 import { JwtService } from '@nestjs/jwt';
@@ -9,11 +10,14 @@ import { PrismaClientKnownRequestError } from '@prisma/client/runtime';
 @Injectable()
 export class AuthService {
 
-  private saltRounds = 12;
+  private saltRounds: number;
 
-  constructor(private prisma: PrismaService, private JwtService: JwtService) {
-    // TODO add config service
-
+  constructor(
+    private prisma: PrismaService,
+    private JwtService: JwtService,
+    private config: ConfigService
+  ) {
+    this.saltRounds = config.get<number>('SALT_ROUNDS');
   }
 
   async signupLocal(dto: SignupDto): Promise<Tokens> {
@@ -83,7 +87,7 @@ export class AuthService {
     });
     if (!user || !user.hashedRt) throw new ForbiddenException('auth.error.accessDenied');
 
-    const rtMatches = await bcrypt.verify(user.hashedRt, rt); // TODO maybe wrong way
+    const rtMatches = await bcrypt.compare(rt, user.hashedRt);
     if (!rtMatches) throw new ForbiddenException('auth.error.accessDenied');
 
     const tokens = await this.getTokens(user.id, user.email);
@@ -112,11 +116,11 @@ export class AuthService {
 
     const [at, rt] = await Promise.all([
       this.JwtService.signAsync(jwtPayload, {
-        secret: 'secret', // TODO load from config service
+        secret: this.config.get<string>('ACCESS_TOKEN_SECRET'),
         expiresIn: '15m',
       }),
       this.JwtService.signAsync(jwtPayload, {
-        secret: 'rt secret', // TODO load from config service
+        secret: this.config.get<string>('REFRESH_TOKEN_SECRET'),
         expiresIn: '15d',
       }),
     ]);

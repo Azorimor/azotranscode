@@ -3,6 +3,7 @@
  * This is only a minimal backend to get started.
  */
 
+import { PrismaService } from '@lib/prisma';
 import { Logger } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 
@@ -17,6 +18,8 @@ async function bootstrap() {
   Logger.log(
     `🚀 Application is running on: http://localhost:${port}/${globalPrefix}`
   );
+  const prismaService: PrismaService = app.get(PrismaService);
+  prismaService.enableShutdownHooks(app);
 }
 
 bootstrap();
