@@ -4,7 +4,7 @@ import { ConfigService } from '@nestjs/config';
 import { AuthDto, SignupDto } from '../dto';
 import { JwtPayload, Tokens } from '../types';
 import { JwtService } from '@nestjs/jwt';
-import bcrypt from 'bcrypt';
+import * as bcrypt from 'bcrypt';
 import { PrismaClientKnownRequestError } from '@prisma/client/runtime';
 
 @Injectable()
